@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="mx-auto">
+  <nav class="bg-white shadow-md">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <h1 class="text-3xl font-semibold text-purple-500">ChatVerse</h1>
+        
+        <!-- Hamburger Button -->
+        <div class="sm:hidden">
+          <button id="menu-btn" class="text-gray-800 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="hidden sm:flex space-x-4 items-center">
+          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-purple-600 transition">Home</a>
+          <a href="index.html#features" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-purple-600 transition">Features</a>
+          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-purple-600 transition">About Us</a>
+          <a href="support.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-purple-600 transition">Support</a>
+        </div>
+
+        <!-- Sign Up Button -->
+        <div class="hidden sm:block">
+          <button class="inline-flex items-center gap-2 px-6 py-3 ml-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-lg transition transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:from-purple-600 hover:to-pink-600 focus:outline-none focus:ring-4 focus:ring-purple-300">
+            <a href="login.html">Sign Up</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="sm:hidden hidden mt-4 space-y-2">
+        <a href="index.html" class="block px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-purple-600 transition">Home</a>
+        <a href="index.html#features" class="block px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-purple-600 transition">Features</a>
+        <a href="about.html" class="block px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-purple-600 transition">About Us</a>
+        <a href="support.html" class="block px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-purple-600 transition">Support</a>
+        <div class="px-4 py-2">
+          <button class="w-full inline-flex justify-center items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-lg transition transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:from-purple-600 hover:to-pink-600 focus:outline-none focus:ring-4 focus:ring-purple-300">
+            <a href="login.html">Sign Up</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- contact us page.. -->
+ <div class="flex flex-col items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+  <h1 class="text-3xl font-bold text-purple-600 mb-2">Need any Help? Get in touch 👋</h1>
+  <p class="text-gray-700 mb-6">We will get back to you ASAP</p>
+
+  <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 ease-in-out hover:scale-105">
+    <form action="#">
+      <div class="mb-4">
+        <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+        <input id="first-name" type="text" placeholder="First Name" class="mt-1 w-full px-4 py-2 border border-blue-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-400" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+        <input id="last-name" type="text" placeholder="Last Name" class="mt-1 w-full px-4 py-2 border border-blue-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-400">
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input id="email" type="email" placeholder="Email" class="mt-1 w-full px-4 py-2 border border-blue-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-400" required>
+      </div>
+
+      <div class="mb-6">
+        <label for="msg" class="block text-sm font-medium text-gray-700">Message</label>
+        <textarea id="msg" name="message" rows="4" placeholder="Type your message" class="mt-1 w-full px-4 py-2 border border-blue-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-purple-400"></textarea>
+      </div>
+
+      <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-md transition duration-300 ease-in-out hover:from-purple-600 hover:to-pink-600 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>

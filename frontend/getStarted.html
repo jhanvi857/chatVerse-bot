@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatVerse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- mesg area... -->
+    <!-- <div class="flex h-screen w-full"> -->
+      <main class="flex flex-col h-screen p-6">
+        <!-- Chat header -->
+        <!-- <header
+          class="flex items-center justify-between border-b border-gray-300 pb-3 mb-4"
+        >
+          <h1 class="text-2xl font-semibold text-[#4f45e4]">Chatverse</h1>
+        </header> -->
+
+        <!-- Messages area -->
+        <section
+          id="messages"
+          class="flex-1 overflow-y-auto p-4 bg-[#F9FAFB] rounded-lg scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+        ></section>
+
+        <!-- Input area -->
+        <form id="chat-form" class="mt-6 flex items-center gap-3">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type your message..."
+            class="flex-1 mt-4 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#F3F3FF]"
+            autocomplete="off"
+            required
+          />
+
+          <!-- Icons on right (attachment/mic - optional) -->
+          <div class="flex items-center mt-4 gap-2 text-gray-400 pr-2">
+            <button>
+              <svg
+                class="w-5 h-5 text-gray-700 cursor:pointer hover:text-gray-800 transition"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.586-6.586a4 4 0 10-5.656-5.656l-6.586 6.586a6 6 0 108.484 8.484L19 13"
+                />
+              </svg>
+            </button>
+            <!-- Microphone Icon -->
+            <button>
+              <svg
+                class="w-5 h-5 mt-4text-gray-700 hover:text-gray-600 transition"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 1.75a3.25 3.25 0 013.25 3.25v6a3.25 3.25 0 01-6.5 0v-6A3.25 3.25 0 0112 1.75z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5.75 10.75a6.25 6.25 0 0012.5 0M12 17.75v4M8 21.75h8"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="ml-0 w-10 h-10 mt-4 flex items-center justify-center bg-[#4f45e4] text-white rounded-full hover:bg-gray-700 transition duration-200 hover:shadow-[0_0_8px_rgba(99,102,241,0.6)] transition-all duration-150"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 12h14m0 0l-6-6m6 6l-6 6"
+              />
+            </svg>
+          </button>
+        </form>
+      </main>
+    </div>
+    <script src="index.js"></script>
+    <script src="loadCommon.js"></script>
+  </body>
+</html>

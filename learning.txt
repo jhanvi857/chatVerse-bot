@@ -1,0 +1,129 @@
+npm i mongoose
+const mongoose = require("mongoose")
+schema - define the structure
+schema -> model
+Using models we do CRUD operations
+//connection 
+mongoose.connect('mongodb://127.0.0.1:27017/dbName')
+.then(()=>console.log("mongodb connected"))
+.catch(err=> console.log("DB error",err))
+//schema
+const userSchema = new mongoose.Schema({
+    firstName:{
+        type:String,
+        required : true,
+    }
+    email:{
+        type:String,
+        required:true,
+        unique:true,
+    },
+    {timestamps : true}//create , updated track
+})
+const user = mongoose.model('user(name)',userSchema);
+
+app.post("/api/...",async (req,res) => {
+    const body = req.body;
+    if(!body || !body.firstName || !body.email) {
+        return res.status(400).json({msg:"All fields are required"});
+    }
+    const result = await user.create({
+        firstName:body.firstName,
+        email : body.email,
+    });
+    return res.status(201).json({msg: "user created!"})
+})
+app.get("/users",async (req,res) => {
+    const allDbUsers = await user.find({})
+})
+.get(async(req,res) =>{
+    const user = await user.findById(req.params.id);
+})
+.patch(async (req,res) => {
+    await user.findByIdAndUpdate(req.params.id,{password:"changed password"}) //get from frontend
+})
+.delete(same but function will be findByIdAndDelete())
+
+//MVC - model view controller
+1st folder = models //all models in this
+2nd controllers
+3rd routes
+4th views
+
+models {
+    user.js - cut and paste userSchema make model module.expots = user;
+}
+routes - user.js require express reouter = express.router shift all app.get post etc in tis and replace app with router export router
+remove /user import userRouter = ('./routes/user')
+app.use("/user",userRouter)
+
+connection.js 
+require mongoose
+async function connectMongoDb(url) {
+    return mongoose.connect(url);
+}
+module.exports = connectMongoDb
+
+//refactor middleware
+make folder named middlewares create index.js file
+const fs = require
+function logReqRes(fileName) {
+    return (req,res,next) => {
+        fs.appendFile(
+            fileName,
+            `\n${date.now()}:${req.ip} ${req.method}:${req.path}\n`
+            (err,data) =.{
+                next();
+            }
+        )
+    }
+}
+app.use(logReqRes("log.txt));
+controllers - .getAllUsers(req,res) {
+    models/user
+}
+ui - view folder
+
+//server side rendering...
+npm i ejs
+in main index.js app.set('view engine','ejs');
+views - make ejs files = html files
+use path modules in main index.js
+const path = require("path);
+app.set("views",path.resolve('./views'))
+app.get('/test' , async (req,res) =>{
+    const allUsers = await user.find({});
+    return res.render('fileName.ejs',{
+        url:allUsers
+    });
+})
+
+//how to show var. in ejs
+//form handeling in backend...
+<form method="POST" action = "/url">
+<input type = "text" name = "redirectUrl"/>
+<button type="submit"></button>
+//for form data support ..
+app.use(express.urlencoded({extended:false}))
+//ejs extension
+//stateful - stateless authentication...
+
+routes - user.js 
+require express
+const {handleUserSignUp} = require("../controllers/user")
+router = express.Router();
+router.post('./',handleUserSignUp)
+
+//controller - user.js
+const User = require('../models/user)
+async function handleUserSignUp(req,res) {
+    const {name,email,password} = req.body;
+    await User.create({
+        name, //label name attribute..
+        email,
+        password,
+    });
+    return res.render("home");
+}
+//export func.
+

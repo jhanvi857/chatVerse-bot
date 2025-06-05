@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomodoro Timer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center min-h-screen">
+  <div class="mt-4 px-4 text-center">
+    <h1 class="text-3xl font-bold mb-6">Pomodoro Timer</h1>
+
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 mb-6">
+      <button class=" py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-500 rounded-md hover:bg-purple-600">
+        Pomodoro
+      </button>
+      <button class=" py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-500 rounded-lg hover:bg-purple-600">
+        Short Break
+      </button>
+      <button class="px-6 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-500 rounded-lg hover:bg-purple-600">
+        Long Break
+      </button>
+    </div>
+<div class="flex flex-col h-2xl">
+    <div class="flex flex-col items-center justify-evenly h-64 w-full max-w-[400px] bg-gray-100 mx-auto rounded-md shadow-xl">
+      <button class="rounded-full align-center border border-gray-700 h-40 w-40" id="timer" >25:00</button>
+      <div class="flex gap-4">
+        <button class="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-500 rounded-lg hover:bg-purple-600" onclick="timerInterval()">
+        start
+      </button>
+      <button class="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-500 rounded-lg hover:bg-purple-600" onclick="timerInterval()">
+        pause
+      </button>
+      <button class="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-500 rounded-lg hover:bg-purple-600" onclick="timerInterval()">
+        Stop
+      </button>
+      </div>
+    </div>
+  </div>
+  <script src="productivity.js"></script>
+</body>
+</html>
