@@ -47,9 +47,9 @@ Chatverse is an AI chatbot platform built to deliver accurate, context-aware res
 ## Installation
 
 1. Clone the repository  
-   ```
-   git clone https://github.com/your-username/chatverse.git
-   ```
+```
+git clone https://github.com/your-username/chatverse.git
+```
 
 2. Navigate to the project directory
 ``` 
@@ -69,7 +69,8 @@ AI_API_KEY=your_api_key
 ```
 
 5. Start the backend server
-```npm start
+```
+npm start
 ```
 
 6. Open index.html in your browser to access the frontend, or set up a static server if applicable.
