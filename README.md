@@ -47,12 +47,13 @@ Welcome to **Chatverse**, an intelligent AI-powered chatbot designed to assist y
 ## Installation
 
 1. Clone the repository  
-   ```bash
+   ```
    git clone https://github.com/your-username/chatverse.git
    ```
 
 2. Navigate to the project directory
-``` cd chatverse 
+``` 
+cd chatverse 
 ```
 
 3. Install backend dependencies 
@@ -61,7 +62,8 @@ npm install
 ```
 
 4. Create a .env file and add your API keys and database URI
- ``` PORT=5000
+ ``` 
+PORT=5000
 MONGO_URI=your_mongodb_connection_string
 AI_API_KEY=your_api_key
 ```
