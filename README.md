@@ -5,8 +5,8 @@ Welcome to **Chatverse**, an intelligent AI-powered chatbot designed to assist y
 
 ## About
 
-'''Chatverse is an AI chatbot platform built to deliver accurate, context-aware responses. Whether you need assistance, casual conversation, or information, Chatverse is your go-to virtual assistant. The system leverages advanced AI models and offers an intuitive frontend for easy interaction.
-'''
+Chatverse is an AI chatbot platform built to deliver accurate, context-aware responses. Whether you need assistance, casual conversation, or information, Chatverse is your go-to virtual assistant. The system leverages advanced AI models and offers an intuitive frontend for easy interaction.
+
 ---
 
 ## Features
