@@ -1,4 +1,3 @@
-# chatVerse-bot
 # Chatverse - AI Chatbot
 
 Welcome to **Chatverse**, an intelligent AI-powered chatbot designed to assist you with various queries and provide seamless conversational experiences.
